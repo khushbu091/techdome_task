@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Loan Management System</h1>
+    </header>
+    <main>
+        <p>This is the landing page for your loan management system.</p>
+        <p>You can access the following features:</p>
+        <ul>
+            <li><a href="{% url 'loan_list' %}">View List of Loans</a></li>
+            <li><a href="{% url 'add_repayment' %}">Add Repayments</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Loan Management System</p>
+    </footer>
+</body>
+</html>

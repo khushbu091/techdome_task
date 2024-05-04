@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="head">
+        <h1>Simple App : Add User</h1>
+    </div>
+        <div id="navbar">
+            <a href="{% url 'index' %}">Home Page</a>
+            <a href="{% url 'loan_list' %}">Loans</a>
+        </div>
+    <div id="uadd">
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required><br><br>
+        
+            <button type="submit">Add User</button>
+            </form>
+    </div>
+</body>
+</html>

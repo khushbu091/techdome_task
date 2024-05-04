@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Loan Details</h1>
+    <p><strong>ID:</strong> {{ loan.id }}</p>
+    <p><strong>Customer:</strong> {{ loan.customer }}</p>
+    <p><strong>Amount:</strong> {{ loan.amount }}</p>
+    <p><strong>Term:</strong> {{ loan.term }}</p>
+    <p><strong>Status:</strong> {{ loan.state }}</p>
+</body>
+</html>
